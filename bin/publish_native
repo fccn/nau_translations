@@ -20,10 +20,10 @@ sudo -E -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manag
 
 # Remove any remaining hashed file and collect the assets
 export IGNORE_PATTERNS="-i *css -i *.html -i scss -i gif -i images"
-sudo rm /edx/var/edxapp/staticfiles/js/i18n/pt-pt/djangojs.*.js
+sudo rm -f /edx/var/edxapp/staticfiles/js/i18n/pt-pt/djangojs.*.js
 sudo -E -H -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py lms collectstatic $IGNORE_PATTERNS --noinput -v2 --settings $EDX_PLATFORM_SETTINGS | grep i18n/pt-pt
 
-sudo rm /edx/var/edxapp/staticfiles/studio/js/i18n/pt-pt/djangojs.*.js
+sudo rm -f /edx/var/edxapp/staticfiles/studio/js/i18n/pt-pt/djangojs.*.js
 sudo -E -H -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py cms collectstatic $IGNORE_PATTERNS --noinput -v2 --settings $EDX_PLATFORM_SETTINGS | grep i18n/pt-pt
 
 # Now we remove the uncommited changes so the next deployment does not stop
