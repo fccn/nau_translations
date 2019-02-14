@@ -30,7 +30,7 @@ make requirements
 
 Activate the COMPREHENSIVE_THEME_LOCALE_PATHS:
 
-Both on the LMS and STUDIO you need to edit the file `/edx/app/edxapp/lms.env.json` and modify the COMPREHENSIVE_THEME_LOCALE_PATHS. For studio, the modification also needs to be done at the `lms.env.json` since studio will inherit this particular setting from the LMS.
+Both on the LMS and STUDIO you need to edit the file `/edx/app/edxapp/lms.env.json` and modify the COMPREHENSIVE_THEME_LOCALE_PATHS. For studio, the modification also needs to be done both at the `cms.env.json` since studio will inherit this particular setting from the LMS during a part of the procedure.
 
 Normally it looks like:
 ```
@@ -57,6 +57,7 @@ vi ../lms.env.json
 # studio
 make studio-shell
 vi ../lms.env.json
+vi ../cms.env.json
 ```
 
 Now you are ready to run the code:
@@ -69,7 +70,39 @@ make publish_studio_devstack
 
 Getting started on a Native installation. E.g. DEV, STAGE, PROD
 ===============================================================
-TBD
+
+
+Get the code:
+```
+sudo mkdir -p /edx/var/i18n_nau
+cd /edx/var/i18n_nau
+sudo git clone git@gitlab.fccn.pt:nau/nau_translations.git
+sudo chown edxapp:www-data -R /edx/var/i18n_nau
+```
+
+Activate the COMPREHENSIVE_THEME_LOCALE_PATHS:
+
+Edit the files `/edx/app/edxapp/lms.env.json` and `/edx/app/edxapp/cms.env.json`. In them modify the COMPREHENSIVE_THEME_LOCALE_PATHS.
+
+Normally it looks like:
+```
+"COMPREHENSIVE_THEME_LOCALE_PATHS": [
+    "/edx/var/edx-themes/edx-themes/edx-platform/nau-basic/conf/locale",
+],
+```
+
+Make it:
+```
+"COMPREHENSIVE_THEME_LOCALE_PATHS": [
+    "/edx/var/edx-themes/edx-themes/edx-platform/nau-basic/conf/locale",
+    "/edx/var/i18n_nau/nau_translations/conf/locale"
+],
+```
+
+Now you are ready to run the code:
+```
+/edx/var/i18n_nau/nau_translations/bin/publish_native
+```
 
 Running from Jenkins
 ====================
@@ -80,7 +113,7 @@ Developer notes
 ===============
 
 - [] for cms it does not override the theme until we merge the common.py changes
-- [] What happens if we modify COMPREHENSIVE_THEME_LOCALE_PATHS before we clone?
+- [x] What happens if we modify COMPREHENSIVE_THEME_LOCALE_PATHS before we clone? -> nothing
 
 next steps
 - [] add COMPREHENSIVE_THEME_LOCALE_PATHS over ansible
@@ -89,3 +122,16 @@ next steps
 - [] automate update
 - [] add update to the regular deployments as a final step
 - [] solve issue with modifications to the edx-platform repo
+
+
+First install
+    manual
+
+    - [ ] lms server
+    - [ ] lms browser
+    - [ ] cms server
+    - [ ] cms browser
+
+Updates -> ansible
+
+During deployments it just works

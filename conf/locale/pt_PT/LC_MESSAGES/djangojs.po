@@ -22,13 +22,13 @@ msgstr ""
 
 # test on browser-side pages from LMS
 msgid "Sign In"
-msgstr "Iniciar Sessão #"
+msgstr "Iniciar Sessão *"
 
 # test on browser-side pages from CMS
 msgid "Publish"
-msgstr "Publicar #"
+msgstr "Publicar *"
 
 # test on Ora2 browser-side from LMS
 # test on Ora2 browser-side from CMS
 msgid "This response has been saved but not submitted."
-msgstr "Esta resposta foi salva mas não foi enviada. #"
+msgstr "Esta resposta foi salva mas não foi enviada. *"
