@@ -1,0 +1,35 @@
+# Portuguese translation overrides for NAU.
+# Copyright (C) 2018 eduNEXT
+# This file is distributed under the same license as the NAU project.
+# Rui Ribeiro <rui.ribeiro@fccn.pt>, 2019.
+# Felipe Montoya <felipe.montoya@edunext.co>, 2019.
+# Luis Moreno <luis.moreno@edunext.co>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: V1.0\n"
+"Report-Msgid-Bugs-To: equipa@nau.edu.pt\n"
+"POT-Creation-Date: 2018-11-10 00:09+0000\n"
+"PO-Revision-Date: 2018-11-09 18:09+0000\n"
+"Last-Translator: \n"
+"Language: pt_PT\n"
+"Language-Team: pt_PT <equipa@nau.edu.pt>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+# test on server-side pages from LMS
+# result: Positive
+msgid "About"
+msgstr "Acerca #"
+
+# test on Ora2 server-side from LMS
+# test on Ora2 server-side from CMS
+msgid "Your Response"
+msgstr "Sua Resposta #"
+
+# test on server-side pages from CMS
+msgid "Help"
+msgstr "Ajuda #"
