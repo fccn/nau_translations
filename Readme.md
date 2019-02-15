@@ -106,32 +106,18 @@ Now you are ready to run the code:
 
 Running from Jenkins
 ====================
-TBD
+
+Currently this project is installed only at the DEV environment (https://lms.dev.nau.fccn.pt/)
+
+There is an both an ansible playbook and a jenkins task to run said playbook.
+
+The jenkins task can be found at https://jenkins.static.dev.nau.fccn.pt/view/i18n/job/Apply-nau-translations-final-layer/
+To run the default parameters are already correct.
 
 
 Developer notes
 ===============
 
-- [] for cms it does not override the theme until we merge the common.py changes
-- [x] What happens if we modify COMPREHENSIVE_THEME_LOCALE_PATHS before we clone? -> nothing
-
 next steps
-- [] add COMPREHENSIVE_THEME_LOCALE_PATHS over ansible
-- [] clone repo using ansible on DEV (master)
-- [] manually run the update until it works
-- [] automate update
 - [] add update to the regular deployments as a final step
-- [] solve issue with modifications to the edx-platform repo
 
-
-First install
-    manual
-
-    - [ ] lms server
-    - [ ] lms browser
-    - [ ] cms server
-    - [ ] cms browser
-
-Updates -> ansible
-
-During deployments it just works
