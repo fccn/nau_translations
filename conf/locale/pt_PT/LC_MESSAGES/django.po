@@ -23,13 +23,13 @@ msgstr ""
 # test on server-side pages from LMS
 # result: Positive
 msgid "About"
-msgstr "Acerca ^"
+msgstr "Acerca *"
 
 # test on Ora2 server-side from LMS
 # test on Ora2 server-side from CMS
 msgid "Your Response"
-msgstr "Sua Resposta ^"
+msgstr "Sua Resposta *"
 
 # test on server-side pages from CMS
 msgid "Help"
-msgstr "Ajuda ^"
+msgstr "Ajuda *"
