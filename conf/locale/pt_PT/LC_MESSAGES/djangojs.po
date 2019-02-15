@@ -32,3 +32,15 @@ msgstr "Publicar *"
 # test on Ora2 browser-side from CMS
 msgid "This response has been saved but not submitted."
 msgstr "Esta resposta foi salva mas não foi enviada. *"
+
+# NAU-252
+msgid "Forgot password?"
+msgstr "Esqueceu a senha?"
+
+# NAU-252
+msgid ""
+"Please enter your email address below and we will send you instructions for "
+"setting a new password."
+msgstr ""
+"Por favor, insira seu endereço de e-mail abaixo e nós enviaremos as "
+"instruções para a criação de uma nova senha. "

@@ -33,3 +33,16 @@ msgstr "Sua Resposta *"
 # test on server-side pages from CMS
 msgid "Help"
 msgstr "Ajuda *"
+
+#: This solves NAU-201
+msgid "Unscheduled"
+msgstr "Não calendarizado"
+
+# NAU-252
+msgid "Forgot password?"
+msgstr "Esqueceu a senha?"
+
+# NAU-219
+msgid "Enter a password with at least {requirements}."
+msgstr "Insira uma palavra-passe com pelo menos {requirements}."
+
