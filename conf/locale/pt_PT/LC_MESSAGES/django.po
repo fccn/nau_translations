@@ -46,3 +46,60 @@ msgstr "Esqueceu a senha?"
 msgid "Enter a password with at least {requirements}."
 msgstr "Insira uma palavra-passe com pelo menos {requirements}."
 
+# NAU-252
+msgid "{num} letter"
+msgid_plural "{num} letters"
+msgstr[0] "{num} letra"
+msgstr[1] "{num} letras"
+
+# NAU-219
+msgid "{num} uppercase letter"
+msgid_plural "{num} uppercase letters"
+msgstr[0] "{num} letra maiúscula"
+msgstr[1] "{num} letras maiúsculas"
+
+# NAU-219
+msgid "{num} lowercase letter"
+msgid_plural "{num} lowercase letters"
+msgstr[0] "{num} letra minúscula"
+msgstr[1] "{num} letras minúsculas"
+
+# NAU-219
+msgid "{num} digit"
+msgid_plural "{num} digits"
+msgstr[0] "{num} dígito"
+msgstr[1] "{num} dígitos"
+
+# NAU-219
+msgid "{num} number"
+msgid_plural "{num} numbers"
+msgstr[0] "{num} número"
+msgstr[1] "{num} números"
+
+# NAU-219
+msgid "{num} punctuation mark"
+msgid_plural "{num} punctuation marks"
+msgstr[0] "{num} sinal de pontuação"
+msgstr[1] "{num} sinais de pontuação"
+
+# NAU-219
+msgid "{num} symbol"
+msgid_plural "{num} symbols"
+msgstr[0] "{num} símbolo"
+msgstr[1] "{num} símbolos"
+
+# NAU-219
+msgid "{num} word"
+msgid_plural "{num} words"
+msgstr[0] "{num} palavra"
+msgstr[1] "{num} palavras"
+
+# NAU-219
+msgid ""
+"Your password must contain at least {num} character, including "
+"{requirements}."
+msgid_plural ""
+"Your password must contain at least {num} characters, including "
+"{requirements}."
+msgstr[0] "A sua palavra-passe deve conter pelo menos {num} carácter, incluindo {requirements}."
+msgstr[1] "A sua palavra-passe deve conter pelo menos {num} caracteres, incluindo {requirements}."
