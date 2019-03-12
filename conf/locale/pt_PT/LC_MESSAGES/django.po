@@ -32,7 +32,7 @@ msgstr "Sua Resposta *"
 
 # test on server-side pages from CMS
 msgid "Help"
-msgstr "Ajuda *"
+msgstr "[Ajuda]"
 
 #: This solves NAU-201
 msgid "Unscheduled"
