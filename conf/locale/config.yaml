@@ -1,0 +1,13 @@
+
+locales:
+  - pt_PT
+
+
+# How should the generate step merge files?
+generate_merge:
+    django.po:
+        - django.po
+        - draganddrop.po
+    djangojs.po:
+        - djangojs.po
+

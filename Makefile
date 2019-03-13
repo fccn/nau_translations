@@ -11,7 +11,7 @@ help: ## Display this help message
 	@perl -nle'print $& if m{^[\.a-zA-Z_-]+:.*?## .*$$}' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m  %-25s\033[0m %s\n", $$1, $$2}'
 
 requirements: ## Install pybabel, run it in a virtualenv
-	pip install babel
+	pip install babel edx-i18n-tools==0.4.6
 
 compile_translations: ## Compile .mo files into .po files
 	pybabel compile -f -D django -d conf/locale/
@@ -31,3 +31,8 @@ publish_studio_devstack:
 
 publish_native:
 	bin/publish_native
+
+pull_translations:
+	i18n_tool transifex pull
+	i18n_tool generate
+	i18n_tool validate
