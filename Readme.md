@@ -15,8 +15,8 @@ Get the code on your devstack go to the directory where you cloned the devstack 
 
 Get the code:
 ```
-mkdir -p src/edxapp
-cd src/edxapp
+mkdir -p src/
+cd src/
 git clone git@gitlab.fccn.pt:nau/nau_translations.git
 ```
 
@@ -43,7 +43,7 @@ Make it:
 ```
 "COMPREHENSIVE_THEME_LOCALE_PATHS": [
     "/edx/var/edx-themes/edx-themes/edx-platform/nau-basic/conf/locale",
-    "/edx/src/edxapp/nau_translations/conf/locale"
+    "/edx/src/nau_translations/conf/locale"
 ],
 ```
 Note: the nau_translations locale must be the last in this list, so that upon initialization it gets loaded into the overall first position of the LOCALE_PATHS.

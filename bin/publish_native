@@ -23,12 +23,12 @@ export IGNORE_PATTERNS="-i *css -i *.html -i scss -i gif -i images"
 sudo rm -f /edx/var/edxapp/staticfiles/js/i18n/pt-pt/djangojs.*.js
 sudo rm -f /edx/var/edxapp/staticfiles/js/i18n/en/djangojs.*.js
 
-sudo -E -H -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py lms collectstatic $IGNORE_PATTERNS --noinput -v2 --settings $EDX_PLATFORM_SETTINGS | grep Copying
+sudo -E -H -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py lms collectstatic $IGNORE_PATTERNS --noinput -v2 --settings $EDX_PLATFORM_SETTINGS | grep Copying | grep i18n
 
 sudo rm -f /edx/var/edxapp/staticfiles/studio/js/i18n/pt-pt/djangojs.*.js
 sudo rm -f /edx/var/edxapp/staticfiles/studio/js/i18n/en/djangojs.*.js
 
-sudo -E -H -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py cms collectstatic $IGNORE_PATTERNS --noinput -v2 --settings $EDX_PLATFORM_SETTINGS | grep Copying
+sudo -E -H -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py cms collectstatic $IGNORE_PATTERNS --noinput -v2 --settings $EDX_PLATFORM_SETTINGS | grep Copying | grep i18n
 # Now we remove the uncommited changes so the next deployment does not stop
 sudo -E -u edxapp git checkout .
 
