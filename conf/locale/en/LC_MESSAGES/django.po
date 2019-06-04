@@ -9,8 +9,13 @@
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
 msgid "Courses"
-msgstr "Courses *"
+msgstr "Courses"
 
 # test on server-side pages from CMS
 msgid "Help"
-msgstr "[Help]"
+msgstr "Help"
+
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+#: cms/templates/settings.html lms/templates/courseware/course_about.html
+msgid "Course Number"
+msgstr "Course number"
