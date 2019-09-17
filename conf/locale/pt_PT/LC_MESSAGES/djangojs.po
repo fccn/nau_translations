@@ -44,3 +44,8 @@ msgid ""
 msgstr ""
 "Por favor, insira seu endereço de e-mail abaixo e nós enviaremos as "
 "instruções para a criação de uma nova senha. "
+
+# Workshop change
+#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+msgid "Re-run Course"
+msgstr "Nova Edição"

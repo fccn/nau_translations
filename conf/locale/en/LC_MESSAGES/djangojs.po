@@ -27,3 +27,8 @@ msgstr "Sign In *"
 # test on browser-side pages from CMS
 msgid "Publish"
 msgstr "Publish *"
+
+# Workshop change
+#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+msgid "Re-run Course"
+msgstr "New edition"
