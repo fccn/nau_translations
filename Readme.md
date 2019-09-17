@@ -30,7 +30,7 @@ make requirements
 
 Activate the COMPREHENSIVE_THEME_LOCALE_PATHS:
 
-Both on the LMS and STUDIO you need to edit the file `/edx/app/edxapp/lms.env.json` and modify the COMPREHENSIVE_THEME_LOCALE_PATHS. For studio, the modification also needs to be done both at the `cms.env.json` since studio will inherit this particular setting from the LMS during a part of the procedure.
+Both on the LMS and STUDIO you need to edit the file `/edx/app/edxapp/lms.env.json` and modify the COMPREHENSIVE_THEME_LOCALE_PATHS. For studio, the modification needs to be done both at `cms.env.json` and at the `lms.env.json` since studio will inherit this particular setting from the LMS during a part of the procedure.
 
 Normally it looks like:
 ```
