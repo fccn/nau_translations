@@ -821,3 +821,12 @@ msgid "Did not place {missing_count} required item."
 msgid_plural "Did not place {missing_count} required items."
 msgstr[0] "Não foi colocado {missing_count} elemento necessário."
 msgstr[1] "Não foram colocados {missing_count} elementos necessários."
+
+#: common/djangoapps/student/models.py
+msgid "Bachelor's degree"
+msgstr "Licenciatura"
+
+#: common/djangoapps/student/models.py
+msgid "Associate degree"
+msgstr "Bacharelado"
+
