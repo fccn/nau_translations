@@ -49,3 +49,30 @@ msgstr ""
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 msgid "Re-run Course"
 msgstr "Nova Edição"
+
+# GN-84
+#: cms/templates/js/access-editor.underscore
+msgid ""
+"Select a prerequisite subsection and enter a minimum score percentage and"
+" minimum completion percentage to limit access to this subsection. "
+"Allowed values are 0-100"
+msgstr ""
+"Selecione uma subsecção de pré-requisitos e defina a percentagem mínima "
+"de pontuação obtida e a percentagem mínima de conteúdo a visualizar, "
+"necessárias para limitar o acesso a esta subsecção. Os valores permitidos"
+" são 0-100"
+
+# GN-84
+#: cms/templates/js/access-editor.underscore
+msgid "Minimum Completion:"
+msgstr "Percentagem mínima de conteúdo a visualizar:"
+
+# GN-84
+#: cms/templates/js/access-editor.underscore
+msgid ""
+"The minimum completion percentage must be a whole number between 0 and "
+"100."
+msgstr ""
+"A percentagem mínima de respostas a visualizar deve ser um número inteiro"
+" entre 0 e 100."
+
