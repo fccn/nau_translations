@@ -76,3 +76,33 @@ msgstr ""
 "A percentagem mínima de respostas a visualizar deve ser um número inteiro"
 " entre 0 e 100."
 
+# GN-154
+msgid ""
+"Please note: Deletion of your account and personal data is permanent and "
+"cannot be undone. {platformName} will not be able to recover your account or the "
+"data that is deleted."
+msgstr ""
+"Observe: A exclusão de sua conta e dados pessoais é permanente e não pode"
+" ser revertida. A equipa NAU não será capaz de recuperar sua conta ou os "
+"dados que são excluídos."
+
+# GN-154
+msgid ""
+"Once your account is deleted, you cannot use it to take courses on the "
+"{platformName} app, {siteName}, or any other site hosted by {platformName}."
+msgstr "Uma vez que a conta seja eliminada, já não poderá frequentar cursos na plataforma NAU."
+
+# GN-154
+msgid ""
+"You have selected “Delete my account.” Deletion of your account and "
+"personal data is permanent and cannot be undone. {platformName} will not be able to "
+"recover your account or the data that is deleted."
+msgstr ""
+"Você selecionou \"Excluir minha conta\". A exclusão de sua conta e dados "
+"pessoais é permanente e não pode ser desfeita. A equipa de suporte NAU "
+"não será capaz de recuperar sua conta ou os dados que são excluídos."
+
+# GN-154
+msgid ""
+"If you proceed, you will be unable to use this account to take courses on the {platformName} app, {siteName}, or any other site hosted by {platformName}."
+msgstr "Se você prosseguir, você não poderá usar esta conta NAU."
