@@ -15,10 +15,10 @@ if [[ -n "${EDX_PLATFORM_SETTINGS_OVERRIDE:-}" ]]; then
 fi
 
 # To begin we compile the catalogs for the js based translations
-sudo -E -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py lms compilejsi18n --locale pt-pt --locale en --settings $EDX_PLATFORM_SETTINGS
-sudo -E -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py lms compilejsi18n --locale en --settings $EDX_PLATFORM_SETTINGS
+sudo -E -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py lms compilejsi18n --locale pt-pt --settings $EDX_PLATFORM_SETTINGS
+sudo -E -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py lms compilejsi18n --locale en    --settings $EDX_PLATFORM_SETTINGS
 sudo -E -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py cms compilejsi18n --locale pt-pt --settings $EDX_PLATFORM_SETTINGS
-sudo -E -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py cms compilejsi18n --locale en --settings $EDX_PLATFORM_SETTINGS
+sudo -E -u edxapp env "PATH=$PATH" /edx/app/edxapp/venvs/edxapp/bin/python manage.py cms compilejsi18n --locale en    --settings $EDX_PLATFORM_SETTINGS
 
 # Remove any remaining hashed file and collect the assets
 export IGNORE_PATTERNS="-i *css -i *.html -i scss -i gif -i images"
