@@ -830,3 +830,8 @@ msgstr "Licenciatura"
 msgid "Associate degree"
 msgstr "Bacharelado"
 
+# GN-176 - the char : appears repeated in the quiz feedback field
+#: common/lib/capa/capa/responsetypes.py
+#: common/lib/xmodule/xmodule/capa_module.py
+msgid "Answer"
+msgstr "Resposta"
