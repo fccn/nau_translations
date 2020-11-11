@@ -835,3 +835,8 @@ msgstr "Bacharelado"
 #: common/lib/xmodule/xmodule/capa_module.py
 msgid "Answer"
 msgstr "Resposta"
+
+# GN-206
+msgid "Answers are displayed within the problem"
+msgstr "As respostas corretas encontram-se marcadas diretamente no problema"
+
