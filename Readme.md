@@ -30,34 +30,32 @@ make requirements
 
 Activate the COMPREHENSIVE_THEME_LOCALE_PATHS:
 
-Both on the LMS and STUDIO you need to edit the file `/edx/app/edxapp/lms.env.json` and modify the COMPREHENSIVE_THEME_LOCALE_PATHS. For studio, the modification needs to be done both at `cms.env.json` and at the `lms.env.json` since studio will inherit this particular setting from the LMS during a part of the procedure.
+Both on the LMS and STUDIO you need to edit the file `/edx/etc/lms.yml` and `/edx/etc/studio.yml and modify the COMPREHENSIVE_THEME_LOCALE_PATHS configuration.
 
 Normally it looks like:
 ```
-"COMPREHENSIVE_THEME_LOCALE_PATHS": [
-    "/edx/var/edx-themes/edx-themes/edx-platform/nau-basic/conf/locale",
-],
+COMPREHENSIVE_THEME_DIRS:
+- '/edx/app/edx-themes/edx-platform/'
 ```
 
 Make it:
 ```
-"COMPREHENSIVE_THEME_LOCALE_PATHS": [
-    "/edx/var/edx-themes/edx-themes/edx-platform/nau-basic/conf/locale",
-    "/edx/src/nau_translations/conf/locale"
-],
+COMPREHENSIVE_THEME_DIRS:
+- '/edx/app/edx-themes/edx-platform/'
+- '/edx/src/nau_translations/conf/locale'
 ```
+
 Note: the nau_translations locale must be the last in this list, so that upon initialization it gets loaded into the overall first position of the LOCALE_PATHS.
 
 You can edit the file using the containers using:
 ```
 # lms
 make lms-shell
-vi ../lms.env.json
+vim /edx/etc/lms.yml
 
 # studio
 make studio-shell
-vi ../lms.env.json
-vi ../cms.env.json
+vim /edx/etc/studio.yml
 ```
 
 Now you are ready to run the code:
@@ -82,21 +80,19 @@ sudo chown edxapp:www-data -R /edx/var/i18n_nau
 
 Activate the COMPREHENSIVE_THEME_LOCALE_PATHS:
 
-Edit the files `/edx/app/edxapp/lms.env.json` and `/edx/app/edxapp/cms.env.json`. In them modify the COMPREHENSIVE_THEME_LOCALE_PATHS.
+Edit the files `/edx/etc/lms.yml` and `/edx/etc/studio.yml`. In them modify the COMPREHENSIVE_THEME_LOCALE_PATHS.
 
 Normally it looks like:
 ```
-"COMPREHENSIVE_THEME_LOCALE_PATHS": [
-    "/edx/var/edx-themes/edx-themes/edx-platform/nau-basic/conf/locale",
-],
+COMPREHENSIVE_THEME_LOCALE_PATHS:
+ - "/edx/var/edx-themes/edx-themes/edx-platform/nau-basic/conf/locale"
 ```
 
-Make it:
+Make it: 
 ```
-"COMPREHENSIVE_THEME_LOCALE_PATHS": [
-    "/edx/var/edx-themes/edx-themes/edx-platform/nau-basic/conf/locale",
-    "/edx/var/i18n_nau/nau_translations/conf/locale"
-],
+COMPREHENSIVE_THEME_LOCALE_PATHS:
+- "/edx/var/edx-themes/edx-themes/edx-platform/nau-basic/conf/locale"
+- "/edx/var/i18n_nau/nau_translations/conf/locale"
 ```
 
 Now you are ready to run the code:
@@ -113,11 +109,4 @@ There is an both an ansible playbook and a jenkins task to run said playbook.
 
 The jenkins task can be found at https://jenkins.static.dev.nau.fccn.pt/view/i18n/job/Apply-nau-translations-final-layer/
 To run the default parameters are already correct.
-
-
-Developer notes
-===============
-
-next steps
-- [] add update to the regular deployments as a final step
 
