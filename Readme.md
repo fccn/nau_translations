@@ -42,6 +42,8 @@ Make it:
 ```
 COMPREHENSIVE_THEME_DIRS:
 - '/edx/app/edx-themes/edx-platform/'
+COMPREHENSIVE_THEME_LOCALE_PATHS:
+- '/edx/app/edx-themes/edx-platform/nau-basic/conf/locale'
 - '/edx/src/nau_translations/conf/locale'
 ```
 
