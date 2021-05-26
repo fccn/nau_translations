@@ -17,7 +17,7 @@ Get the code:
 ```
 mkdir -p src/
 cd src/
-git clone git@gitlab.fccn.pt:nau/nau_translations.git
+git clone git@github.com:fccn/nau_translations.git
 ```
 
 Install the requirements:
@@ -76,7 +76,7 @@ Get the code:
 ```
 sudo mkdir -p /edx/var/i18n_nau
 cd /edx/var/i18n_nau
-sudo git clone git@gitlab.fccn.pt:nau/nau_translations.git
+sudo git clone git@github.com:fccn/nau_translations.git
 sudo chown edxapp:www-data -R /edx/var/i18n_nau
 ```
 
