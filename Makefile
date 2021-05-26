@@ -19,14 +19,14 @@ compile_translations: ## Compile .po files into .mo files
 	pybabel compile -f -D django -d conf/locale/
 	pybabel compile -f -D djangojs -d conf/locale/
 
-publish_lms_devstack: | compile_translations # Publish changes to LMS devstack
+publish_lms_devstack: | compile_translations ## Publish changes to LMS devstack
 	@echo "Running compilejsi18n && collectstatic at lms"
 	@docker exec -t edx.$(COMPOSE_PROJECT_NAME).lms bash -c 'source /edx/app/edxapp/edxapp_env && cd /edx/app/edxapp/edx-platform/ && python manage.py lms compilejsi18n --locale pt-pt'
 	@docker exec -t edx.$(COMPOSE_PROJECT_NAME).lms bash -c 'source /edx/app/edxapp/edxapp_env && cd /edx/app/edxapp/edx-platform/ && python manage.py lms compilejsi18n --locale en'
 	@docker exec -t edx.$(COMPOSE_PROJECT_NAME).lms bash -c 'source /edx/app/edxapp/edxapp_env && cd /edx/app/edxapp/edx-platform/ && python manage.py lms collectstatic -i *css -i templates -i vendor --noinput -v2 | grep Copying | grep i18n'
 	@docker exec -t edx.$(COMPOSE_PROJECT_NAME).lms bash -c 'kill $$(ps aux | grep "manage.py lms" | egrep -v "while|grep" | awk "{print \$$2}")'
 
-publish_studio_devstack: | compile_translations # Publish changes to STUDIO devstack
+publish_studio_devstack: | compile_translations ## Publish changes to STUDIO devstack
 	@echo "Running compilejsi18n && collectstatic at studio"
 	@docker exec -t edx.$(COMPOSE_PROJECT_NAME).studio bash -c 'source /edx/app/edxapp/edxapp_env && cd /edx/app/edxapp/edx-platform/ && python manage.py cms compilejsi18n --locale pt-pt'
 	@docker exec -t edx.$(COMPOSE_PROJECT_NAME).studio bash -c 'source /edx/app/edxapp/edxapp_env && cd /edx/app/edxapp/edx-platform/ && python manage.py cms compilejsi18n --locale en'
