@@ -1,3 +1,7 @@
+Archived
+======
+This repository has been **ARCHIVED** and **MERGED** with the [nau-themes](https://github.com/fccn/nau-themes).
+
 Readme
 ======
 
